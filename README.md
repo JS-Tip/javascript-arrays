@@ -12,6 +12,41 @@ The **beginner** will benefit from this course if they already have first experi
 
 The **intermediate** developer will benefit from the practical examples of array methods and how to best combine them in real-world applications.
 
+## How to use the code in this repo
+
+Because this is a video course, there is already a visual component to the concepts covered. But there's no better way to learn than to tinker with code, and I have tried to make it as easy as possible to tinker with this repo.
+
+There is a devcontainer for this repo, which means you can use Github Codespaces to play with the code, or clone the repo open the container locally as long as you have Docker installed on your machine.
+
+In order to run a specific file, you can run the following command in your terminal:
+
+```
+node [path/to/file.js]
+```
+
+For example, in order to run the `reduce` file, you can run:
+terminal:
+
+```
+node methods/reduce/reduce.js
+```
+
+Additionally, all tests can be run using the following command:
+terminal:
+
+```
+pnpm test
+```
+
+Individual test files can be run by adding the filepath to the end of the previous command, for instance:
+terminal:
+
+```
+pnpm test methods/reduce/reduce.test.js
+```
+
+Happy coding!
+
 ## Course Overview
 
 ### Introduction to the Array class
@@ -94,7 +129,13 @@ The Array class offers the methods in this part in order to _iterate_ over its v
 2. `keys`
 3. `values`
 
+### Part 9: Chaining Methods
+
+This chapter is the culmination of all of the methods covered in this course. We will cover some common patterns which come about in the daily work of JavaScript developers. Additionally, we will look at testing custom functions and benchmarking different implementations of the same function.
+
 ### Conclusion
+
+A quick summary of the course and everything which has been covered.
 
 ### A Note on this Course
 
