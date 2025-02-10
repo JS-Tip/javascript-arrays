@@ -1,3 +1,11 @@
 {
-  "ghcr.io/devcontainers/features/node:1": {}
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:dev-20-bookworm",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      },
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  }
 }
