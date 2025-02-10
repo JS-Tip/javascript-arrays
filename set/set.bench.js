@@ -1,6 +1,6 @@
 import {
   getAdminRolesWithouSet,
-  getUniqueAdminRolesWithSet,
+  getAdminRolesWithSet,
   getAdminRoles,
 } from './set.js';
 import { Bench } from 'tinybench';
@@ -517,7 +517,7 @@ const roles = getAdminRoles(users);
 
 bench
   .add('with Set', () => {
-    getUniqueAdminRolesWithSet(roles);
+    getAdminRolesWithSet(roles);
   })
   .add('without Set', async () => {
     getAdminRolesWithouSet(roles);

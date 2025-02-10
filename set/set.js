@@ -49,16 +49,28 @@ export function getAdminRolesWithouSet(roles) {
 }
 
 console.log(
-  'without set:',
+  'without Set:',
   getAdminRolesWithouSet(getAdminRoles(usersWithRoles)),
 );
 
-// Create a unique list of roles which are paired
+// Create a unique list of roles which are associated
 // with the role 'admin'
-export function getUniqueAdminRolesWithSet(roles) {
+export function getAdminRolesWithSet(roles) {
   return Array.from(new Set(roles));
 }
-console.log(
-  'unique roles:',
-  getUniqueAdminRolesWithSet(getAdminRoles(usersWithRoles)),
-);
+
+// This is useful to investigate the Set class before
+// it is converted to an Array.
+const uniqueRoles = new Set(getAdminRoles(usersWithRoles));
+console.table(uniqueRoles);
+console.log('Set size', uniqueRoles.size);
+
+// Has is generally faster than the Array.prototype.includes method,
+// "when an array has a length equal to a set's size".
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#performance
+console.log('Set has developer?', uniqueRoles.has('developer'));
+console.log('Set has customer?', uniqueRoles.has('customer'));
+
+console.log('Set entries', uniqueRoles.entries());
+
+console.log('With Set:', getAdminRolesWithSet(getAdminRoles(usersWithRoles)));
