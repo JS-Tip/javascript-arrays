@@ -58,10 +58,10 @@ This introduction gives a quick interview of Array basics - how to create them a
 The methods in this part are some of the ideas I first encountered when learning about JavaScript arrays, and I see these methods on a daily basis in my work.
 
 1. `push`
-2. `includes`
-3. `forEach`
-4. `map`
-5. `filter`
+2. `forEach`
+3. `map`
+4. `filter`
+5. `includes`
 6. `find`
 
 ### Part 2: String Me Along
@@ -76,11 +76,10 @@ Doubtless, strings are important in any programming language, and they are often
 As a JavaScript developer, you need to have a Batman-esque utility belt for daily tasks. These methods will help you to manipulate arrays with ease.
 
 1. `pop`
-2. `unshift`
-3. `join`
-4. `reverse`
-5. `slice`
-6. `sort`
+2. `join`
+3. `reverse`
+4. `slice`
+5. `sort`
 
 ### Part 4: Looping for Logic and Flattness
 
@@ -109,9 +108,10 @@ Want to put some stuff in an array? Cool! These methods will `fill` you `with` j
 
 1. `with`
 2. `splice`
-3. `concat`
-4. `fill`
-5. `copyWithin`
+3. `unshift`
+4. `concat`
+5. `fill`
+6. `copyWithin`
 
 ### Part 7: Arrays 4eva
 
