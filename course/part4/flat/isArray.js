@@ -17,4 +17,4 @@ function flatten(arr) {
     return flattenedArr
 }
 
-console.log("flattened", flatten(numbers))
+console.log("flattened:", flatten(numbers))
