@@ -199,3 +199,32 @@ const vehicleResults = {
     },
   ],
 };
+
+// Are all of the flatMaps necesary, or would one be enough?
+const modelTypes = vehicleList?.vehicles?.flatMap(
+  vehicle =>
+    vehicle?.manufacturers?.flatMap(
+      manufacturer =>
+        manufacturer?.modelGroups?.flatMap(
+          modelGroup =>
+            modelGroup?.models?.flatMap(model => {
+              if (!model?.modelTypes) {
+                return [];
+              }
+
+              return model?.modelTypes?.flatMap(modelType => ({
+                ...modelType,
+                manufacturerName: manufacturer.manufacturerName,
+                modelName: modelGroup.modelGroupName,
+                typename: modelType.typename,
+                productionBegin: modelType.productionBegin,
+                productionEnd: modelType.productionEnd,
+                fuelType: modelType.fuelType,
+                secondFuelType: modelType.secondFuelType,
+                kiloWatt: modelType.kiloWatt,
+                price: modelType.price,
+              }));
+            })
+        )
+    )
+);
