@@ -1,230 +1,90 @@
-const vehicleResults = {
-  vehicles: [
-    {
-      vehicleCode: 10,
-      vehicleType: 'PKW',
-      manufacturers: [
-        {
-          manufacturerNatCode: 8,
-          manufacturerName: 'BMW',
-          modelGroups: [
-            {
-              modelGroupCode: 6763,
-              modelGroupName: '2er-Reihe',
-              models: [
-                {
-                  modelNatCode: 21763,
-                  modelTypes: [
-                    {
-                      nationalCode: 235999,
-                      typename: '216d Active Tourer',
-                      productionBegin: 2018,
-                      speed: 195,
-                      technicalCapacity: 1496.0,
-                      kiloWatt: 85.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 116.0,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 1970,
-                      vehicleOwnWeight: 1500,
-                      vehiclePayload: 470,
-                      co2Emission: 128,
-                      fuelType: 'Diesel',
-                      secondFuelType: '-',
-                      price: 32400.0,
-                      height: 1555,
-                      width: 1800,
-                      lenght: 4354,
-                      numberOfGear: 6,
-                    },
-                    {
-                      nationalCode: 236001,
-                      typename: '218d Active Tourer',
-                      productionBegin: 2018,
-                      speed: 213,
-                      technicalCapacity: 1995.0,
-                      kiloWatt: 110.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 149.5,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 2010,
-                      vehicleOwnWeight: 1530,
-                      vehiclePayload: 480,
-                      co2Emission: 128,
-                      fuelType: 'Diesel',
-                      secondFuelType: '-',
-                      price: 34300.0,
-                      height: 1555,
-                      width: 1800,
-                      lenght: 4354,
-                      numberOfGear: 6,
-                    },
-                    {
-                      nationalCode: 236003,
-                      productionBegin: 2018,
-                      speed: 224,
-                      technicalCapacity: 1995.0,
-                      kiloWatt: 140.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 190.3,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 2045,
-                      vehicleOwnWeight: 1560,
-                      vehiclePayload: 485,
-                      co2Emission: 135,
-                      fuelType: 'Diesel',
-                      secondFuelType: '-',
-                      price: 40400.0,
-                      height: 1555,
-                      width: 1800,
-                      lenght: 4354,
-                      numberOfGear: 8,
-                    },
-                    {
-                      nationalCode: 236000,
-                      typename: '216d Active Tourer Aut.',
-                      productionBegin: 2018,
-                      speed: 194,
-                      technicalCapacity: 1496.0,
-                      kiloWatt: 85.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 115.5,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 1975,
-                      vehicleOwnWeight: 1505,
-                      vehiclePayload: 470,
-                      co2Emission: 133,
-                      fuelType: 'Diesel',
-                      secondFuelType: '-',
-                      price: 34740.99,
-                      height: 1555,
-                      width: 1800,
-                      lenght: 4354,
-                      numberOfGear: 7,
-                    },
-                    {
-                      nationalCode: 236002,
-                      typename: '218d Active Tourer Aut.',
-                      productionBegin: 2018,
-                      speed: 213,
-                      technicalCapacity: 1995.0,
-                      kiloWatt: 110.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 149.5,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 2040,
-                      vehicleOwnWeight: 1565,
-                      vehiclePayload: 475,
-                      co2Emission: 135,
-                      fuelType: 'Diesel',
-                      secondFuelType: '-',
-                      price: 36754.97,
-                      height: 1555,
-                      width: 1800,
-                      lenght: 4354,
-                      numberOfGear: 8,
-                    },
-                  ],
-                },
-                {
-                  modelNatCode: 23081,
-                  modelTypes: undefined,
-                },
-                {
-                  modelNatCode: 23040,
-                  modelTypes: [
-                    {
-                      nationalCode: 268772,
-                      typename: 'M240i Coupé xDrive Aut.',
-                      productionBegin: 2021,
-                      speed: 250,
-                      technicalCapacity: 2998.0,
-                      kiloWatt: 275.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 374.0,
-                      numberOfSeat: 4,
-                      numberOfDoor: 2,
-                      vehicleTotalWeight: 2165,
-                      vehicleOwnWeight: 1765,
-                      vehiclePayload: 400,
-                      co2Emission: 200,
-                      fuelType: 'Benzin bleifrei',
-                      secondFuelType: '-',
-                      price: 67650.0,
-                      height: 1390,
-                      width: 1838,
-                      lenght: 4537,
-                      numberOfGear: 8,
-                    },
-                  ],
-                },
-                {
-                  modelNatCode: 23205,
-                  modelTypes: [
-                    {
-                      nationalCode: 273176,
-                      typename: '223i xDrive Active Tourer 48 V Aut.',
-                      productionBegin: 2022,
-                      speed: 241,
-                      technicalCapacity: 1998.0,
-                      kiloWatt: 150.0,
-                      secondKiloWatt: 0.0,
-                      horsePower: 204.0,
-                      numberOfSeat: 5,
-                      numberOfDoor: 5,
-                      vehicleTotalWeight: 2105,
-                      vehicleOwnWeight: 1620,
-                      vehiclePayload: 485,
-                      co2Emission: 160,
-                      fuelType: 'Benzin',
-                      secondFuelType: '-',
-                      price: 45050.0,
-                      height: 1576,
-                      width: 1824,
-                      lenght: 4386,
-                      numberOfGear: 7,
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ],
-};
+import { vehicleResults } from './api.js';
 
-// Are all of the flatMaps necesary, or would one be enough?
-const modelTypes = vehicleList?.vehicles?.flatMap(
-  vehicle =>
-    vehicle?.manufacturers?.flatMap(
-      manufacturer =>
-        manufacturer?.modelGroups?.flatMap(
-          modelGroup =>
-            modelGroup?.models?.flatMap(model => {
-              if (!model?.modelTypes) {
-                return [];
-              }
+/**
+ * `flatMap` is less performant than using map `combined` with `flat`, 
+ * however it offers more readability and the option to access the 
+ * current array in its third parameter.
+ */
 
-              return model?.modelTypes?.flatMap(modelType => ({
-                ...modelType,
-                manufacturerName: manufacturer.manufacturerName,
-                modelName: modelGroup.modelGroupName,
-                typename: modelType.typename,
-                productionBegin: modelType.productionBegin,
-                productionEnd: modelType.productionEnd,
-                fuelType: modelType.fuelType,
-                secondFuelType: modelType.secondFuelType,
-                kiloWatt: modelType.kiloWatt,
-                price: modelType.price,
-              }));
-            })
-        )
-    )
-);
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap#for_adding_and_removing_items_during_a_map
+const stations = ["New Haven", "West Haven", "Milford (closed)", "Stratford"];
+const line = stations
+  .filter((name) => !name.endsWith("(closed)"))
+  .flatMap((name, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx === arr.length - 1) return []; // last station has no next station
+    return [`${name} - ${arr[idx + 1]}`];
+  });
+console.log(line); // ['New Haven - West Haven', 'West Haven - Stratford']
+
+
+export function getVehicleDetailsWithFlatMap(vehicleList) {
+  return vehicleList?.vehicles?.flatMap(
+    vehicle =>
+      vehicle?.manufacturers?.flatMap(
+        manufacturer =>
+          manufacturer?.modelGroups?.flatMap(
+            modelGroup =>
+              modelGroup?.models?.flatMap((model) => {
+                // Remove element by returning an empty array
+                if (!model?.modelTypes) {
+                  return [];
+                }
+  
+                return model?.modelTypes?.map(modelType => ({
+                  ...modelType,
+                  manufacturerName: manufacturer.manufacturerName,
+                  modelName: modelGroup.modelGroupName,
+                  typename: modelType.typename,
+                  productionBegin: modelType.productionBegin,
+                  productionEnd: modelType.productionEnd,
+                  fuelType: modelType.fuelType,
+                  secondFuelType: modelType.secondFuelType,
+                  kiloWatt: modelType.kiloWatt,
+                  price: modelType.price,
+                }));
+              })
+          )
+      )
+  );
+}
+
+export function getVehicleDetailsWithMapAndFlat(vehicleList) {
+  return vehicleList?.vehicles?.map(
+    vehicle =>
+      vehicle?.manufacturers?.map(
+        manufacturer =>
+          manufacturer?.modelGroups?.map(
+            modelGroup =>
+              modelGroup?.models?.map((model) => {
+                // Remove element by returning an empty array
+                if (!model?.modelTypes) {
+                  return [];
+                }
+  
+                return model?.modelTypes?.map(modelType => ({
+                  ...modelType,
+                  manufacturerName: manufacturer.manufacturerName,
+                  modelName: modelGroup.modelGroupName,
+                  typename: modelType.typename,
+                  productionBegin: modelType.productionBegin,
+                  productionEnd: modelType.productionEnd,
+                  fuelType: modelType.fuelType,
+                  secondFuelType: modelType.secondFuelType,
+                  kiloWatt: modelType.kiloWatt,
+                  price: modelType.price,
+                })).flat();
+              }).flat()
+          ).flat()
+      ).flat()
+  ).flat();
+}
+
+console.time("with flat map")
+getVehicleDetailsWithFlatMap(vehicleResults)
+console.timeEnd("with flat map")
+
+console.time("without flat map")
+getVehicleDetailsWithMapAndFlat(vehicleResults)
+console.timeEnd("without flat map")
