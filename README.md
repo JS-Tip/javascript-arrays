@@ -58,9 +58,18 @@ This introduction gives a quick interview of Array basics - how to create them a
 The methods in this part are some of the ideas I first encountered when learning about JavaScript arrays, and I see these methods on a daily basis in my work.
 
 1. `push`
+    - Parameter overview
+    - Spread syntax
 2. `forEach`
+    - Combining `forEach` with `push`
+    - Combining `forEach` with the spread operator
+    - Practical example: looping over an array of functions
 3. `map`
+    - Parameter overview
+    - Comparison to `forEach`
+    - Practical Example: Employee Time Tracker
 4. `filter`
+    - When to filter and when to find
 5. `includes`
 6. `find`
 
@@ -76,10 +85,11 @@ Doubtless, strings are important in any programming language, and they are often
 As a JavaScript developer, you need to have a Batman-esque utility belt for daily tasks. These methods will help you to manipulate arrays with ease.
 
 1. `pop`
+2. `shift`
 2. `join`
-3. `reverse`
+3. `reverse` / `toReversed`
 4. `slice`
-5. `sort`
+5. `sort` / `toSorted`
 
 ### Part 4: Looping for Logic and Flattness
 
@@ -88,8 +98,13 @@ When looping over an array, developers often need to check for specific conditio
 1. `some`
 2. `every`
 3. `reduce`
+    - `reduce` vs. `filter` and `map`
+    - practical example
 4. `reduceRight`
-5. `flat` - touches on the static method `Array.isArray()` too
+5. `flat`
+    - custom `flatten` methods using `Array.isArray`
+    - `instanceof` vs. `Array.isArray`
+    - compare different approaches to flattening arrays
 6. `flatMap`
 
 ### Part 5: Indexing or "Dude, Where's My Element?"
@@ -107,21 +122,13 @@ Working with array indexes is a core skill for any developer. Without indexes, d
 Want to put some stuff in an array? Cool! These methods will `fill` you `with` joy.
 
 1. `with`
-2. `splice`
+2. `splice` / `toSpliced`
 3. `unshift`
 4. `concat`
 5. `fill`
 6. `copyWithin`
 
-### Part 7: Arrays 4eva
-
-Some methods need a bigger commitment and demand you mutate an array instead of making a copy. There is no room for cold feet in this part.
-
-1. `toReversed`
-2. `toSorted`
-3. `toSpliced`
-
-### Part 8: Iterate This
+### Part 7: Iterate This
 
 The Array class offers the methods in this part in order to _iterate_ over its values using the - you guessed it - `array iterator object`.
 
@@ -129,7 +136,7 @@ The Array class offers the methods in this part in order to _iterate_ over its v
 2. `keys`
 3. `values`
 
-### Part 9: Chaining Methods
+### Part 8: Chaining Methods
 
 This chapter is the culmination of all of the methods covered in this course. We will cover some common patterns which come about in the daily work of JavaScript developers. Additionally, we will look at testing custom functions and benchmarking different implementations of the same function.
 

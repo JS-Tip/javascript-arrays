@@ -74,3 +74,5 @@ console.log('Set has customer?', uniqueRoles.has('customer'));
 console.log('Set entries', uniqueRoles.entries());
 
 console.log('With Set:', getAdminRolesWithSet(getAdminRoles(usersWithRoles)));
+
+console.log("set of user objects", new Set(usersWithRoles))

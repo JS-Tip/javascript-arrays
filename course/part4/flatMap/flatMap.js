@@ -1,4 +1,5 @@
 import { vehicleResults } from './api.js';
+import { flatten } from '../flat/isArray.js'
 
 /**
  * `flatMap` is less performant than using map `combined` with `flat`, 
@@ -16,7 +17,7 @@ const line = stations
     if (idx === arr.length - 1) return []; // last station has no next station
     return [`${name} - ${arr[idx + 1]}`];
   });
-console.log(line); // ['New Haven - West Haven', 'West Haven - Stratford']
+// console.log(line); // ['New Haven - West Haven', 'West Haven - Stratford']
 
 
 export function getVehicleDetailsWithFlatMap(vehicleList) {
@@ -81,6 +82,39 @@ export function getVehicleDetailsWithMapAndFlat(vehicleList) {
   ).flat();
 }
 
+export function getVehicleDetailsWithMapAndFlatten(vehicleList) {
+  const vehicleProperties = vehicleList?.vehicles?.map(
+    vehicle =>
+      vehicle?.manufacturers?.map(
+        manufacturer =>
+          manufacturer?.modelGroups?.map(
+            modelGroup =>
+              modelGroup?.models?.map((model) => {
+                // Remove element by returning an empty array
+                if (!model?.modelTypes) {
+                  return [];
+                }
+  
+                return model?.modelTypes?.map(modelType => ({
+                  ...modelType,
+                  manufacturerName: manufacturer.manufacturerName,
+                  modelName: modelGroup.modelGroupName,
+                  typename: modelType.typename,
+                  productionBegin: modelType.productionBegin,
+                  productionEnd: modelType.productionEnd,
+                  fuelType: modelType.fuelType,
+                  secondFuelType: modelType.secondFuelType,
+                  kiloWatt: modelType.kiloWatt,
+                  price: modelType.price,
+                }))
+              })
+          )
+      )
+  )
+
+  return flatten(vehicleProperties)
+}
+
 console.time("with flat map")
 getVehicleDetailsWithFlatMap(vehicleResults)
 console.timeEnd("with flat map")
@@ -88,3 +122,7 @@ console.timeEnd("with flat map")
 console.time("without flat map")
 getVehicleDetailsWithMapAndFlat(vehicleResults)
 console.timeEnd("without flat map")
+
+console.time("with recursive flatten")
+getVehicleDetailsWithMapAndFlatten(vehicleResults)
+console.timeEnd("with recursive flatten")
