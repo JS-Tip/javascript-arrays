@@ -4,6 +4,8 @@ console.log(
   numbers.filter((number) => number < 3),
 );
 
+// A list of days worked and the amount
+// of hours worked on that day
 const employeeHourEntries = [
   {date: "02.03.2025", hours: 8},
   {date: "02.04.2025", hours: 8},
@@ -30,5 +32,21 @@ const employeeHourEntries = [
 function workedOvertime(day) {
   return day.hours > 8
 }
+
+// ✅ This function is helpful as it filters
+// based on a condition which could yield
+// multiple results.
 const workdaysWithOvertime = employeeHourEntries.filter(workedOvertime)
 console.log("workdaysWithOvertime", workdaysWithOvertime)
+
+function dateWorked(day) {
+  return day.date === "02.20.2025"
+}
+
+// ❌ workdaysByDate is less helpful as only
+// one value will ever be found, because the date
+// key has unique values. The find method would be
+// more appropriate in this case, as we would not have
+// to access an array to retrieve its single object.
+const workdaysByDate = employeeHourEntries.filter(dateWorked)
+console.log("workdaysByDate", workdaysByDate)
