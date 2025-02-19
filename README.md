@@ -128,13 +128,14 @@ Want to put some stuff in an array? Cool! These methods will `fill` you `with` j
 5. `fill`
 6. `copyWithin`
 
-### Part 7: Iterate This
+### Part 7: There and Back Again - An Object's Tale
 
-The Array class offers the methods in this part in order to _iterate_ over its values using the - you guessed it - `array iterator object`.
+It is oftentimes necessary to convert the entries of an object into an array, either by grabbing the key and value or one of the key or value.
 
-1. `entries`
-2. `keys`
-3. `values`
+1. `Object.values()`
+2. `Object.keys()`
+3. `Object.entries()`
+4. `Object.fromEntries()`
 
 ### Part 8: Chaining Methods
 

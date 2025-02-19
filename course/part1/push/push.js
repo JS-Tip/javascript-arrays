@@ -1,17 +1,22 @@
 const users = [
-  { id: 1, roles: ['customer'], hasKeys: false },
-  { id: 2, roles: ['admin', 'developer'], hasKeys: true },
-  { id: 3, roles: ['customer'], hasKeys: false },
-  { id: 4, roles: ['customer'], hasKeys: false },
-  { id: 5, roles: ['admin', 'manager'], hasKeys: true },
-  { id: 6, roles: ['admin', 'manager'], hasKeys: true },
-  { id: 7, roles: ['admin', 'manager'], hasKeys: true },
-  { id: 8, roles: ['staff'], hasKeys: true },
-  { id: 9, roles: ['staff'], hasKeys: true },
-  { id: 10, roles: ['staff'], hasKeys: true },
-  { id: 11, roles: ['supplier', 'producer'], hasKeys: false },
-  { id: 12, roles: ['supplier'], hasKeys: false },
-  { id: 13, roles: ['admin', 'owner'], hasKeys: true },
+  { id: 1, roles: ['customer'] },
+  { id: 2, roles: ['admin', 'developer'] },
+  { id: 3, roles: ['customer'] },
+  { id: 4, roles: ['customer'] },
+  { id: 5, roles: ['admin', 'manager'] },
+  { id: 6, roles: ['admin', 'manager'] },
+  { id: 7, roles: ['admin', 'manager'] },
+  { id: 8, roles: ['staff'] },
+  { id: 9, roles: ['staff'] },
+  { id: 10, roles: ['staff'] },
+  { id: 11, roles: ['supplier', 'producer'] },
+  { id: 12, roles: ['supplier'] },
+  { id: 13, roles: ['admin', 'owner'] },
 ];
 
-users.push({ id: 14, roles: ['customer'], hasKeys: false });
+const length = users.push({ id: 14, roles: ['customer'] });
+console.log("length:", length)
+
+const newLength = users.push({ id: 15, roles: ['customer'] }, { id: 16, roles: ['customer'] });
+console.log("newLength:", newLength)
+
