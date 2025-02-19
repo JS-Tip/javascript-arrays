@@ -27,8 +27,24 @@ const employeeHourEntries = [
   {date: "02.28.2025", hours: 7},
 ]
 
+// ✅ This example of the map method is helpful as it
+// adds a field to the dataset based on another piece of
+// information within the dataset.
 const entriesWithMinutes = employeeHourEntries.map(entries => ({
   ...entries,
   minutes: entries.hours * 60
 }))
 console.log(entriesWithMinutes)
+
+// ❌ This example is less helpful as map is not
+// meant to contain logic about whether something should
+// be updated or not, because the resulting array will include
+// undefined entries. Call filter before the map call
+// or use reduce instead.
+const entriesWithMinutesWithNoOvertime = employeeHourEntries.map(entries => {
+  if (entries.hours <= 8) {
+    return {...entries,
+      minutes: entries.hours * 60}
+  }
+})
+console.log(entriesWithMinutesWithNoOvertime)
