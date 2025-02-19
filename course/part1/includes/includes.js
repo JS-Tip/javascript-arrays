@@ -20,6 +20,11 @@
 ['1', '2', '3'].includes(3); // false
 
 // Practical Example: Check for unpaid bills
+
+// generateRandomPayments randomly creates an array of
+// five values which can either be 'paid' or 'unpaid'.
+// This is a helper function and is not covered in the course,
+// but check it out if you're interested 🙂
 function generateRandomPayments() {
   const payments = []
   for (let i = 0; i < 5; i++) {

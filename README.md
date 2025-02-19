@@ -4,7 +4,7 @@ This course is about the JavaScript `Array` class, its instance methods, static 
 
 The examples from this course are practical and come from years of working with data structures in real-world projects - which are imperfect by nature. So instead of using arrays of numbers to show how methods like `reduce` or `includes` work, arrays of objects, sometimes nested, will be used to demonstrate common implementations of JavaScript's array methods.
 
-## Who This Course is for
+## Who This Course is for 🎒
 
 This course is **aimed at beginner to intermediate level JavaScript developers** who want to broaden and deepen their knowledge of JavaScript array methods.
 
@@ -14,7 +14,7 @@ The **intermediate** developer will benefit from the practical examples of array
 
 Each module of this course builds upon the previous one, so multiple methods can be chained together as you work through the course.
 
-## How to use the code in this repo
+## How to use the code in this repo 🔧
 
 Because this is a video course, there is already a visual component to the concepts covered. But there's no better way to learn than to tinker with code, and I have tried to make it as easy as possible to tinker with this repo.
 
@@ -60,28 +60,28 @@ This introduction gives a quick interview of Array basics - how to create them a
 The methods in this part are some of the ideas I first encountered when learning about JavaScript arrays, and I see these methods on a daily basis in my work.
 
 1. `push`
-    - Parameter overview
-    - Spread syntax
-    - Return value
+   - Parameter overview
+   - Spread syntax
+   - Return value
 2. `forEach`
-    - The `for-loop` and `forEach`
-    - Combining `forEach` with `push`
-    - Mutability and `forEach`
-    - Practical example: Creating an array of user objects
+   - The `for-loop` and `forEach`
+   - Combining `forEach` with `push`
+   - Mutability and `forEach`
+   - Practical example: Creating an array of user objects
 3. `map`
-    - Parameter overview
-    - Comparison to `forEach` - immutability
-    - Practical Example: Employee Time Tracker
+   - Parameter overview
+   - Comparison to `forEach` - immutability
+   - Practical Example: Employee Time Tracker
 4. `filter`
-    - Basic example
-    - Practical example: when to `filter` and when to `find`
+   - Basic example
+   - Practical example: when to `filter` and when to `find`
 5. `includes`
-    - Basic example
-    - `fromIndex` parameter
-    - Practical Example: check for unpaid bills
+   - Basic example
+   - `fromIndex` parameter
+   - Practical Example: check for unpaid bills
 6. `find`
-    - Basic example
-    - Practical example: `find` by date
+   - Basic example
+   - Practical example: `find` by date
 
 ### Part 2: String Me Along
 
@@ -96,25 +96,27 @@ As a JavaScript developer, you need to have a Batman-esque utility belt for dail
 
 1. `pop`
 2. `shift`
-2. `join`
-3. `reverse` / `toReversed`
-4. `slice`
-5. `sort` / `toSorted`
+3. `join`
+4. `reverse` / `toReversed`
+5. `slice`
+6. `sort` / `toSorted`
 
 ### Part 4: Looping for Logic and Flattness
 
 When looping over an array, developers often need to check for specific conditions. These methods help to check those conditions and methods like `reduce` manipulate the output accordingly. But even if all of the conditions are met, a developer might want to flatten an array to get rid of nesting, which is where `flat` and `flatMap` come into play.
 
 1. `some`
+   - Practical example: some bills paid
 2. `every`
+   - Practical example: all bills paid
 3. `reduce`
-    - `reduce` vs. `filter` and `map`
-    - practical example
+   - `reduce` vs. `filter` and `map`
+   - practical example
 4. `reduceRight`
 5. `flat`
-    - custom `flatten` methods using `Array.isArray`
-    - `instanceof` vs. `Array.isArray`
-    - compare different approaches to flattening arrays
+   - custom `flatten` methods using `Array.isArray`
+   - `instanceof` vs. `Array.isArray`
+   - compare different approaches to flattening arrays
 6. `flatMap`
 
 ### Part 5: Indexing or "Dude, Where's My Element?"
