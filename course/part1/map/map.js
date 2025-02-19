@@ -36,11 +36,10 @@ const entriesWithMinutes = employeeHourEntries.map(entries => ({
 }))
 console.log(entriesWithMinutes)
 
-// ❌ This example is less helpful as map is not
-// meant to contain logic about whether something should
-// be updated or not, because the resulting array will include
-// undefined entries. Call filter before the map call
-// or use reduce instead.
+// ❌ This example is less helpful in comparison to 
+// the map method, because the resulting array will 
+// include undefined entries. Call filter before the 
+// map call or use reduce instead.
 const entriesWithMinutesWithNoOvertime = employeeHourEntries.map(entries => {
   if (entries.hours <= 8) {
     return {...entries,

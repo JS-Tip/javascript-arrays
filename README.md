@@ -12,6 +12,8 @@ The **beginner** will benefit from this course if they already have first experi
 
 The **intermediate** developer will benefit from the practical examples of array methods and how to best combine them in real-world applications.
 
+Each module of this course builds upon the previous one, so multiple methods can be chained together as you work through the course.
+
 ## How to use the code in this repo
 
 Because this is a video course, there is already a visual component to the concepts covered. But there's no better way to learn than to tinker with code, and I have tried to make it as easy as possible to tinker with this repo.
@@ -60,18 +62,26 @@ The methods in this part are some of the ideas I first encountered when learning
 1. `push`
     - Parameter overview
     - Spread syntax
+    - Return value
 2. `forEach`
+    - The `for-loop` and `forEach`
     - Combining `forEach` with `push`
-    - Combining `forEach` with the spread operator
-    - Practical example: looping over an array of functions
+    - Mutability and `forEach`
+    - Practical example: Creating an array of user objects
 3. `map`
     - Parameter overview
-    - Comparison to `forEach`
+    - Comparison to `forEach` - immutability
     - Practical Example: Employee Time Tracker
 4. `filter`
-    - When to filter and when to find
+    - Basic example
+    - Practical example: when to `filter` and when to `find`
 5. `includes`
+    - Basic example
+    - `fromIndex` parameter
+    - Practical Example: check for unpaid bills
 6. `find`
+    - Basic example
+    - Practical example: `find` by date
 
 ### Part 2: String Me Along
 
