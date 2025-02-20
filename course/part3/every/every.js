@@ -45,13 +45,18 @@ if (payments.every(payment => payment === 'paid 💸')) {
 }
 
 // Example: Is Increasing - source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every#using_the_third_argument_of_callbackfn
-const numbers = [-2, 4, -8, 16, -32];
-const isIncreasing = numbers
-  .filter((num) => num > 0)
-  .every((num, idx, arr) => {
+const increasingNumbers = [1, 2, 3, 4, 5];
+const unorderedNumbers = [1, 2, 4, 2, 5];
+
+function isIncreasing(array) {
+  return array.every((num, idx, arr) => {
     // Without the arr argument, there's no way to easily access the
     // intermediate array without saving it to a variable.
     if (idx === 0) return true;
     return num > arr[idx - 1];
   });
-console.log(isIncreasing); // true
+}
+
+console.log("is increasing:", isIncreasing(increasingNumbers)); // true
+console.log("is not increasing:", isIncreasing(unorderedNumbers)); // true
+

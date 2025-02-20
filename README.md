@@ -1,18 +1,24 @@
-# JavaScript `Array` Class
+# JavaScript `Array` Class 🏁
 
 This course is about the JavaScript `Array` class, its instance methods, static methods, and how each method is used individually and in combination with other array methods.
 
 The examples from this course are practical and come from years of working with data structures in real-world projects - which are imperfect by nature. So instead of using arrays of numbers to show how methods like `reduce` or `includes` work, arrays of objects, sometimes nested, will be used to demonstrate common implementations of JavaScript's array methods.
 
+Some of JavaScript's array methods have been intentionally left out of this course, as I have not encountered them in my time as a developer. This does not mean you won't encounter them, but I have no practical experience to offer regarding these methods. The following array methods **are not** included in this course:
+1. `toLocaleString`
+2. `entries`
+3. `keys`
+4. `values`
+
 ## Who This Course is for 🎒
 
-This course is **aimed at beginner to intermediate level JavaScript developers** who want to broaden and deepen their knowledge of JavaScript array methods.
+This course is **aimed at beginner to intermediate JavaScript developers** who want to broaden and deepen their knowledge of JavaScript array methods.
 
 The **beginner** will benefit from this course if they already have first experiences with for-loops and a feeling for how arrays work.
 
 The **intermediate** developer will benefit from the practical examples of array methods and how to best combine them in real-world applications.
 
-Each module of this course builds upon the previous one, so multiple methods can be chained together as you work through the course.
+Each module of this course builds upon the previous one, so multiple methods can be chained together as you work through the course. This does not mean you need to go through the course in chronological order - I encourage you to check out individual modules if you're curious or are relevant to your daily work.
 
 ## How to use the code in this repo 🔧
 
@@ -30,7 +36,7 @@ For example, in order to run the `reduce` file, you can run:
 terminal:
 
 ```
-node methods/reduce/reduce.js
+node course/path3/reduce/reduce.js
 ```
 
 Additionally, all tests can be run using the following command:
@@ -72,25 +78,19 @@ The methods in this part are some of the ideas I first encountered when learning
    - Parameter overview
    - Comparison to `forEach` - immutability
    - Practical Example: Employee Time Tracker
-4. `filter`
-   - Basic example
-   - Practical example: when to `filter` and when to `find`
-5. `includes`
+4. `includes`
    - Basic example
    - `fromIndex` parameter
    - Practical Example: check for unpaid bills
+5. `filter`
+   - Basic example
+   - Practical example: when to `filter` and when to `find`
 6. `find`
    - Basic example
    - Practical example: `find` by date
 
-### Part 2: String Me Along
 
-Doubtless, strings are important in any programming language, and they are often intertwined with the manipulation of arrays, so we'll put these methods in our toolbox before moving on to more array manipulation.
-
-1. `toString`
-2. `toLocaleString`
-
-### Part 3: Your Utility Belt
+### Part 2: Your Utility Belt
 
 As a JavaScript developer, you need to have a Batman-esque utility belt for daily tasks. These methods will help you to manipulate arrays with ease.
 
@@ -101,7 +101,7 @@ As a JavaScript developer, you need to have a Batman-esque utility belt for dail
 5. `slice`
 6. `sort` / `toSorted`
 
-### Part 4: Looping for Logic and Flattness
+### Part 3: Looping for Logic and Flattness
 
 When looping over an array, developers often need to check for specific conditions. These methods help to check those conditions and methods like `reduce` manipulate the output accordingly. But even if all of the conditions are met, a developer might want to flatten an array to get rid of nesting, which is where `flat` and `flatMap` come into play.
 
@@ -119,7 +119,7 @@ When looping over an array, developers often need to check for specific conditio
    - compare different approaches to flattening arrays
 6. `flatMap`
 
-### Part 5: Indexing or "Dude, Where's My Element?"
+### Part 4: Indexing or "Dude, Where's My Element?"
 
 Working with array indexes is a core skill for any developer. Without indexes, developers are lost in a sea of bytes. These methods are your sail to swiftly find the information you need.
 
@@ -129,7 +129,7 @@ Working with array indexes is a core skill for any developer. Without indexes, d
 4. `findLastIndex`
 5. `at`
 
-### Part 6: Insert Here
+### Part 5: Insert Here
 
 Want to put some stuff in an array? Cool! These methods will `fill` you `with` joy.
 
@@ -140,7 +140,7 @@ Want to put some stuff in an array? Cool! These methods will `fill` you `with` j
 5. `fill`
 6. `copyWithin`
 
-### Part 7: There and Back Again - An Object's Tale
+### Part 6: There and Back Again - An Object's Tale
 
 It is oftentimes necessary to convert the entries of an object into an array, either by grabbing the key and value or one of the key or value.
 
@@ -149,9 +149,13 @@ It is oftentimes necessary to convert the entries of an object into an array, ei
 3. `Object.entries()`
 4. `Object.fromEntries()`
 
-### Part 8: Chaining Methods
+### Part 7: Chaining Methods
 
 This chapter is the culmination of all of the methods covered in this course. We will cover some common patterns which come about in the daily work of JavaScript developers. Additionally, we will look at testing custom functions and benchmarking different implementations of the same function.
+
+1. `toString`
+2. `Set` class
+3. Capitalize
 
 ### Conclusion
 
